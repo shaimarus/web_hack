@@ -1,0 +1,42 @@
+docker run --gpus=all -it --rm -p 5001:5001 -v /mnt/c/Users/shaim/PYTHON_MAIN/hashcat/dock2/files:/home hashcat_v1 bash
+
+hashcat -a 3 -m 0 /home/hash.txt -i --increment-min=1 --increment-max=8 --potfile-disable
+
+
+hashcat -a 3 -m 0 /home/hash.txt -i --increment-min=1 --increment-max=6 
+
+
+
+
+export PATH=$PATH:/home/john-1.9.0-jumbo-1/run
+
+hashcat -a 3 -m 13000 '$rar5$16$3f9c6f313cb1f488750057a7bbb4f743$15$d4ed4e08f4d143ed7726792baba1341d$8$317735f22738eb1e' -i --increment-min=1 --increment-max=6 
+
+
+
+sp.run(['/opt/JohnTheRipper/run/rar2john /home/Big_pass2.rar > hassss.txt'], shell=True)
+
+
+https://hashcat.net/wiki/doku.php?id=example_hashes
+
+
+https://superuser.com/questions/1457837/command-zip2john-is-not-working
+
+git clone "https://github.com/magnumripper/JohnTheRipper.git" && cd JohnTheRipper/src && ./configure && sudo make -s clean && sudo make -sj4
+
+cd ../run/
+./zip2john test.zip
+
+/opt/JohnTheRipper/run/rar2john /home/Big_pass2.rar > hassss.txt
+
+
+RUN mkdir /opt/JohnTheRipper/
+git clone "https://github.com/magnumripper/JohnTheRipper.git" /opt/JohnTheRipper/ && cd /opt/JohnTheRipper/src && ./configure && sudo make -s clean && sudo make -sj4
+
+
+
+
+
+hashcat -a 3 -m 13000 /home/hash.txt -i --increment-min=1 --increment-max=8 --potfile-path=/home/my.pot -1 ?l?u?d ?1?1?1?1?1?1?1?1
+
+hashcat -a 6 -m 13000 /home/hash.txt -i --increment-min=1 --increment-max=8 --potfile-disable /home/dict -1 ?l?u?d ?1?1?1?1?1?1?1?1

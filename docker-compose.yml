@@ -1,0 +1,20 @@
+version: "3"
+services:
+  flask_hack:
+    container_name: web_hack_v2  
+    build: .
+      
+    command: gunicorn -w 4 -b 0.0.0.0:5000 --timeout 600 web_hack:app --reload
+    environment:
+        - FLASK_APP=web_hack.py
+        - FLASK_DEBUG=1
+        - PYTHONUNBUFFERED=TRUE
+    ports:
+        - '5000:5000'
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]

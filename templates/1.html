@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+body {
+    
+    background: #c7b39b url("/static/key6.jpg");
+    color: #fff; /* Цвет текста */
+}
+
+.advantages-item {
+    font-size: 34px;
+    color: #e79417;
+}
+.advantages-item2 {
+    font-size: 34px;
+    color: #fff;
+    background-color: RGB(249, 201, 16);
+    padding: 5px;
+    width: 20%;
+}
+.min1 {
+    font-size: 20px;
+    color: #fff;
+}
+
+.max1 {
+    font-size: 20px;
+    color: #fff;
+}
+
+.tt {
+    font-size: 20px;
+    color: #fff;
+}
+</style>
+
+<p class="advantages-item">Сервис по расшифровке</p>
+
+
+<html>
+   <body>
+      <form action = "/uploader" method = "POST" 
+         enctype = "multipart/form-data">
+         <input class="btn btn-warning" type = "file" name = "file" />
+         <input class="btn btn-warning" type = "submit"/>
+      </form>   
+   </body>
+</html>
+
+<p></p>
+<p></p>
+
+<form method="POST" action="/">
+<div class="dropdown">
+    <button name='type of file' class="btn btn-warning dropdown-toggle" type="submit_button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+        Укажите тип файла
+    </button>
+    <div name='type of file2' class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" href="#">WinRAR</a>
+      <a class="dropdown-item" href="#">WinZip</a>
+      <a class="dropdown-item" href="#">PDF</a>
+      <a class="dropdown-item" href="#">Microsoft Office</a>
+      <a class="dropdown-item" href="#">7z</a>
+    </div>
+    <input class="btn btn-warning dropdown-toggle" type="submit" value="Подтвердите">
+</div>
+</form>
+
+<p></p>
+<p></p>
+
+
+<!--<p class="min1">Укажите минимальную длину пароля:</p>
+
+
+<form action='/min11' method="post">
+<select  name="min1_value">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+    <option value="11">11</option>
+    <option value="12">12</option>
+  </select>
+  <input type="submit" value="Подтвердите">
+    <p > выбран {{min1}}</p>
+</form>-->
+
+<div class="dropdown">
+    <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+        Укажите минимальную длину пароля
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" href="#">1</a>
+      <a class="dropdown-item" href="#">2</a>
+      <a class="dropdown-item" href="#">3</a>
+      <a class="dropdown-item" href="#">4</a>
+      <a class="dropdown-item" href="#">5</a>
+      <a class="dropdown-item" href="#">6</a>
+      <a class="dropdown-item" href="#">7</a>
+      <a class="dropdown-item" href="#">8</a>
+      <a class="dropdown-item" href="#">9</a>
+      <a class="dropdown-item" href="#">10</a>
+      <a class="dropdown-item" href="#">11</a>
+      <a class="dropdown-item" href="#">12</a>
+    </div>
+    <input class="btn btn-danger dropdown-toggle" type="submit" value="Подтвердите">
+</div>
+
+<!--
+<p class="max1"> Укажите максимальную длину пароля:</p>
+<form action='/max11/' method="post">
+<select  name="max1_value">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+    <option value="11">11</option>
+    <option value="12">12</option>
+  </select>
+  <input type="submit" value="Подтвердите">
+  <p > выбран {{max1}}</p>
+</form>
+-->
+<p> </p>
+<p> </p>
+<p> </p>
+
+<div class="dropdown">
+    <button class="btn btn-danger dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+        Укажите максимальную длину пароля
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" href="#">1</a>
+      <a class="dropdown-item" href="#">2</a>
+      <a class="dropdown-item" href="#">3</a>
+      <a class="dropdown-item" href="#">4</a>
+      <a class="dropdown-item" href="#">5</a>
+      <a class="dropdown-item" href="#">6</a>
+      <a class="dropdown-item" href="#">7</a>
+      <a class="dropdown-item" href="#">8</a>
+      <a class="dropdown-item" href="#">9</a>
+      <a class="dropdown-item" href="#">10</a>
+      <a class="dropdown-item" href="#">11</a>
+      <a class="dropdown-item" href="#">12</a>
+    </div>
+    <input class="btn btn-danger dropdown-toggle" type="submit" value="Подтвердите">
+</div>
+
+
+<!--
+<p><input type="search" list="character">
+    <datalist id="character">
+    {% for opt in option %}
+    <option value="{{ opt_min }}"></option>
+    {% endfor %}
+    </datalist>
+</p>
+
+<p class="max1"> Укажите максимальную длину пароля:</p>
+<p><input type="search" list="character">
+    <datalist id="character">
+    {% for opt in option %}
+    <option value="{{ opt_max }}"></option>
+    {% endfor %}
+    </datalist>
+
+</p>
+-->
+
+<p class="tt"> Какие символы учитывать в пароле:</p>
+
+<input type="checkbox" checked ><label class="badge badge-warning" name="a"> ABCDEFGH... </label>
+<input type="checkbox" checked ><label class="badge badge-warning" name="b"> abcdefgh... </label>
+<input type="checkbox" checked ><label class="badge badge-warning" name="c"> 0123456789 </label>
+<input type="checkbox" check ><label class="badge badge-warning" name="d"> !@#$%^&*()_+}{|"?... </label>
+
+<p></p>
+
+<form action="/start/" method = "post">
+<input type="submit" class="btn btn-danger" name="submit_button" value="Запустить расшифровку    ">
+</form>
+
+<p></p>
+
+<!--
+<form action="/status/" method = "post">
+    <input type="submit" class="btn btn-warning" name="submit_button" value="  Узнать статус расшифровки">
+</form>
+-->
+
+<p class="advantages-item2"> PASSWORD: {{ password }} </p> 
+
+<meta charset="UTF-8">
+<title>Creating Real-Time Charts with Flask</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css" rel="stylesheet">
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <canvas id="canvas"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--suppress JSUnresolvedLibraryURL -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<!--suppress JSUnresolvedLibraryURL -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!--suppress JSUnresolvedLibraryURL -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+
+
+<script>
+    $(document).ready(function () {
+        const config = {
+            type: 'line',
+            data: {
+                labels: [],
+                datasets: [{
+                    label: "memory",
+                    backgroundColor: 'rgb(255, 99, 132)',
+                    borderColor: 'rgb(255, 99, 132)',
+                    data: [],
+                    fill: false,
+                }],
+            },
+            options: {
+                responsive: true,
+                title: {
+                    display: true,
+                    text: 'Нагрузка на видеокарту '
+                },
+                tooltips: {
+                    mode: 'index',
+                    intersect: false,
+                },
+                hover: {
+                    mode: 'nearest',
+                    intersect: true
+                },
+                scales: {
+                    xAxes: [{
+                        display: true,
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Time'
+                        }
+                    }],
+                    yAxes: [{
+                        display: true,
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Value'
+                        }
+                    }]
+                }
+            }
+        };
+
+        const context = document.getElementById('canvas').getContext('2d');
+
+        const lineChart = new Chart(context, config);
+
+        const source = new EventSource("/chart-data");
+
+        source.onmessage = function (event) {
+            const data = JSON.parse(event.data);
+            if (config.data.labels.length === 2000) {
+                config.data.labels.shift();
+                config.data.datasets[0].data.shift();
+            }
+            config.data.labels.push(data.time);
+            config.data.datasets[0].data.push(data.value);
+            lineChart.update();
+        }
+    });
+</script>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+</html>
