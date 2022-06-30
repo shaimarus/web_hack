@@ -7,6 +7,7 @@ docker-compose up --build -d
 And then service will be available at
 http://localhost:5000/
 
+![Image alt](https://github.com/shaimarus/web_hack/blob/main/pict1.jpg)
 
 ## ToDo<br/>
 Other formats:
